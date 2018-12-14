@@ -1,11 +1,14 @@
 # splotgen
 payload gen 
+
 hi and thank you for downloading sploitgen 
 
 here how to use git clone https://github.com/Hackingvisionofficial/splotgen.git
 
 cd sploitgen
+
 chmod +x sploitgen.sh
+
 ./sploitgen.sh
 
 pick your payload 
