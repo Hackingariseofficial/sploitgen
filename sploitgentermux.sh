@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/data/data/com.termux/files/usr/bin/bash
 figlet splotgen
 
 trap 'printf "\n";stop' 2
