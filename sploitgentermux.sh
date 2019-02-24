@@ -6,7 +6,7 @@ trap 'printf "\n";stop' 2
 banner() {
                                
 printf "              \e[1;77m laughingman\e[0m\n"
-printf "               \e[1;7m hackingvision.com\e[0m\n"
+printf "               \e[1;7m hackingrise.tk\e[0m\n"
 printf "\n"
 }
 
