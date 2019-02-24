@@ -5,7 +5,7 @@ hi and thank you for downloading sploitgen
 
 here how to use 
 
-git clone https://github.com/Hackingvisionofficial/splotgen.git
+git clone https://github.com/Hackingriseofficial/splotgen.git
 
 cd sploitgen
 
